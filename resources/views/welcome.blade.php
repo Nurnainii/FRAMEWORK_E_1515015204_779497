@@ -38,8 +38,7 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Nama : Nurnaini<p>
-                                   Nim  : 1515015204</div>
+                <div class="title">Laravel 5</div>
             </div>
         </div>
     </body>

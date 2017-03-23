@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class BuatTablePengguna extends Migration
+class CreateBukusTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,12 +12,14 @@ class BuatTablePengguna extends Migration
      */
     public function up()
     {
-        Schema::create('pengguna', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('username');
-            $table->string('password');
-            $table->rememberToken();
+        Schema::create('bukus', function (Blueprint $table) {
+            $table->string('isbn');
+            $table->string('judul');
+            $table->string('pengarang');
+            $table->string('penerbit');
+            $table->integer('halaman');
             $table->timestamps();
+            $table->primary('isbn');
         });
     }
 
@@ -28,6 +30,6 @@ class BuatTablePengguna extends Migration
      */
     public function down()
     {
-        Schema::drop('pengguna');
+        Schema::drop('bukus');
     }
 }
