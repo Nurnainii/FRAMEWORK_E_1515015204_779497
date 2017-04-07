@@ -8,7 +8,7 @@
 	{!! Form::model($mahasiswa,['url'=>'mahasiswa/edit/'.$mahasiswa->id,'class'=>'form-horizontal']) !!}
 	@include('mahasiswa.form')
 	<div style="width: 100%; text-align: right;">
-		<button class="btn btn-info"><i class="fa fa-save"></i> Perbaharui</button>
+		<button class="btn btn-info"><i class="fa fa-save"></i> Perbarui</button>
 		<button type="reset" class="btn btn-danger"><i class="fa fa-undo"></i> Ulangi</button>
 	</div>
 	{!! Form::close() !!}

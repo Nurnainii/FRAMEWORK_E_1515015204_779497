@@ -2,13 +2,18 @@
 @section('container')
 <div class="panel panel-warning">
 	<div classs="panel-heading">
-		<strong><a href="{{url('jadwa_matakuliah')}}"><i style="color:#8a6d3b" class="fa text-default fa-chevron-left"></i></a> Detail Data Dosen Mengajar</strong>
+		<strong><a href="{{url('jadwal_matakuliah')}}"><i style="color:#8a6d3b" class="fa text-default fa-chevron-left"></i></a> Detail Data Dosen Mengajar</strong>
 	</div>
 	<table class="table">
 		<tr>
 			<td>ID Dosen</td>
 			<td>:</td>
 			<td>{{$dosen_matakuliah->dosen_id}}</td>
+		</tr>
+		<tr>
+			<td>ID Mahasiswa</td>
+			<td>:</td>
+			<td>{{$dosen_matakuliah->mahasiswa_id}}</td>
 		</tr>
 		<tr>
 			<td>ID Matakuliah</td>

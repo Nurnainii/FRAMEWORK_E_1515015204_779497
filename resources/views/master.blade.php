@@ -56,7 +56,7 @@
                          <ul class="dropdown-menu" aria-labelledby="dLabel">
                                 <li><a href="{{url('mahasiswa')}}">Data mahasiswa</a></li>
                                 <li class="divider"></li>
-                                <li><a href="{{url('jadwa_matakuliah')}}">Jadwal Mahasiswa</a></li>
+                                <li><a href="{{url('jadwal_matakuliah')}}">Jadwal Mahasiswa</a></li>
                             </ul>
                     </li>
                     
@@ -101,10 +101,12 @@
        <nav class="navbar navbar-default navbar-fixed-bottom">
            <footer class="container">
                <!   please dont delete this ><marquee>
+               created by <a href="https://www.facebook.com/nely.nurnaini">
+               <span><i class="fa fa-facebook-square" style="color: #1da1f2"></i>Nurnaini</span></a>
                created by <a href="https://twitter.com/neny_ls">
-               <span><i class="fa fa-twitter-square" style="color: #2da1f4"></i>neny_ls</span></a>
-               gitHub by <a href="https://https://github.com/Nurnainii/FRAMEWORK_E_1515015204_779497.git">
-              <span><i class="fa fa-github" style="color: #2da1f4"></i>nurnaini</span></a> <!--/   please dont delete this    -->
+               <span><i class="fa fa-twitter-square" style="color: #1da1f2"></i>nurnaini</span></a>
+               gitHub by <a href="https://github.com/Nurnainii/FRAMEWORK_E_1515015204_779497">
+              <span><i class="fa fa-github" style="color: #1da1f2"></i>Nurnainii</span></a> <!--/   please dont delete this    -->
            </marquee></footer>
        </nav>
 

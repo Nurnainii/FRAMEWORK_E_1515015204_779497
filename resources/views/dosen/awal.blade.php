@@ -38,5 +38,7 @@
 				@endforeach
 		</tbody>
 	</table>
+	<a href="{{url('/') }}" class="btn btn-xs btn-primary pull-right">
+			<i class="fa fa-steam"></i>Ke Halaman Awal</a>
 </div>
 @stop
