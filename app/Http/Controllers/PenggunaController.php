@@ -1,60 +1,60 @@
 <?php
 
+
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
 use App\Http\Requests;
-use App\pengguna;
-use Input;
-use Redirect;
-use Informasi;
+use App\Pengguna;
 
 class PenggunaController extends Controller
 {
     public function awal()
     {
-        return view('pengguna.awal',['data'=>Pengguna::all()]);
+    	return view('pengguna.awal',['data'=>Pengguna::all()]);
     }
-
     public function tambah()
     {
-        return view('pengguna.tambah');
+    	return view('pengguna.tambah');
     }
-
     public function simpan(Request $input)
     {
-        $pengguna = new Pengguna();
-        $pengguna->username = $input->username;
-        $pengguna->password = $input->password;
-        $informasi = $pengguna->save() ? 'Berhasil Simpan data ' : 'Gagal Simpan data';
-        return redirect('pengguna')->with(['Informasi'=>$informasi]); 
-    }
+        $this->validate($input,[
+            'username'=>'required',
+            'password'=>'required',
+            ]);
 
-    public function edit($id)
-    {
-        $pengguna = pengguna::find($id);
-        return view ('pengguna.edit')->with (array('pengguna'=>$pengguna));
-    }
-
-    public function lihat($id)
-    {
-        $pengguna = pengguna::find($id);
-        return view('pengguna.lihat')->with(array('pengguna'=>$pengguna));
-    }
-
-    public function update($id, Request $input)
-    {
-        $pengguna = pengguna::find($id);
-        $pengguna->username = $input->username;
-        $pengguna->password = $input->password;
-        $informasi = $pengguna->save() ? 'Berhasil Update data ' : 'Gagal Update data';
-        return redirect('pengguna')->with(['informasi'=>$informasi]); 
-    }
-
-    public function hapus($id)
-    {
-        $pengguna = pengguna::find($id);
-        $informasi = $pengguna->delete() ? 'Berhasil hapus data' : 'Gagal hapus data';
+    	$pengguna = new Pengguna();
+    	$pengguna->username =$input->username;
+    	$pengguna->password =$input->password;
+    	$informasi = $pengguna ->save()?'Berhasil Simpan Data' : 'Gagal Simpan Data';
         return redirect('pengguna')->with(['informasi'=>$informasi]);
     }
+    public function edit($id)
+    {
+        $pengguna= Pengguna::find($id);
+        return view('pengguna.edit')->with(array('pengguna'=>$pengguna));
+    }
+     public function lihat($id)
+    {
+        $pengguna= Pengguna::find($id);
+        return view('pengguna.lihat')->with(array('pengguna'=>$pengguna));
+    }
+     public function update($id,Request $input)
+    {
+        $pengguna= Pengguna::find($id);
+        $pengguna->username = $input->username;
+        $pengguna ->password = $input->password;
+        $informasi= $pengguna->save()? 'Berhasil update data': 'Gagal update data';
+        return redirect('pengguna')->with(['informasi'=>$informasi]);
+    }
+     public function hapus($id)
+    {
+        $pengguna=Pengguna::find($id);
+        $informasi=$pengguna->delete()?'Berhasil hapus data': 'Gagal hapus data';
+        return redirect('pengguna')->with(['informasi'=>$informasi]);
+    }
+
 }

@@ -1,20 +1,19 @@
 <div class="form-group">
-	<label class="col-sm-2 control-label" id="dosen_id"> Id Mahasiswa</label>
+	<label class="col-sm-2 control-label" id="Mahasiswa_id">Mahasiswa</label>
 	<div class="col-sm-10">
-		{!! Form::select('mahasiswa_id',$mahasiswa->lists('nama','id'),null,['class'=>'form-control','id'=> 'mahasiswa_id','placeholder'=>"mahasiswa"]) !!}		
+		{!! Form::select('Mahasiswa_id',$mahasiswa->listMahasiswaDanNim(),null,['class'=>'form-control','id'=>'Mahasiswa_id','placeholder'=>"Mahasiswa"]) !!}
+		</div>
 	</div>
-</div>
-
-<div class="form-group">
-	<label class="col-sm-2 control-label" id="dosen_id"> Id Dosen</label>
-	<div class="col-sm-10">
-		{!! Form::select('dosen_matakuliah_id',$dosen_matakuliah->lists('id'),null,['class'=>'form-control','id'=> 'dosen_id','placeholder'=>"dosen"]) !!}		
+	<div class="form-group">
+		<label class="col-sm-2 control-label" id="Dosen_Matakuliah_id"> Matakuliah</label>
+		<div class="col-sm-10">
+			{!! Form::select('Dosen_Matakuliah_id',$dosen_matakuliah->listDosenDanMatakuliah(),null,['class'=>'form-control','id'=>'Dosen_Matakuliah_id','placeholder'=>"Matakuliah"]) !!}
+		</div>
 	</div>
-</div>
-
-<div class="form-group">
-	<label class="col-sm-2 control-label"> Id Ruangan</label>
-	<div class="col-sm-10">
-		{!! Form::select('ruangan_id',$ruangan->lists('title','id'),null,['class'=>'form-control','id'=>'ruangan_id', 'placeholder'=>'ruangan']) !!}
+	<div class="form-group">
+		<label class="col-sm-2 control-label" id="Ruangan_id"> Ruangan</label>
+		<div class="col-sm-10">
+			{!! Form::select('Ruangan_id',$ruangan->lists('title','id'),null,['class'=>'form-control','id'=>'Ruangan_id','placeholder'=>"Ruangan"]) !!}
+		</div>
 	</div>
-</div>
+	

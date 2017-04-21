@@ -4,10 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Peran extends Model
+class peran extends Model
 {
-    protected $table = 'peran';
+    Protected $table='peran';
     public function pengguna(){
-    	reeturn $this->belongsToMany(Pengguna:class);
+    	return $this ->belongsToMany(pengguna::class);
     }
 }

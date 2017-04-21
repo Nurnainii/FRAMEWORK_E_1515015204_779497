@@ -64,7 +64,7 @@
                         <a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Dosen <span class="caret"></span>
                         </a>
                          <ul class="dropdown-menu" aria-labelledby="dLabel">
-                                <li><a href="{{url('dosen')}}">Data Dosen</a></li>
+                                <li><a href="{{url('dosenn')}}">Data Dosen</a></li>
                                 <li class="divider"></li>
                                 <li><a href="{{url('dosen_matakuliah')}}">Jadwal Dosen Mengajar</a></li>
                             </ul>
@@ -107,7 +107,7 @@
             </div>
             <ul class="list-group">
                 <li class="list-group-item"><i class="fa fa-user-secret fa-5x"></i></li>
-                <li class="list-group-item"><a href="/dosen" class="btn btn-primary"><i class="fa fa-university"></i> DATA DOSEN</a></li>
+                <li class="list-group-item"><a href="/dosenn" class="btn btn-primary"><i class="fa fa-university"></i> DATA DOSEN</a></li>
             </ul>
         </div>
     </div>
@@ -124,15 +124,15 @@
             @yield('container')
        </div>
        <nav class="navbar navbar-default navbar-fixed-bottom">
-           <footer class="container"><marquee>
+           <footer class="container">
                <!   please dont delete this >
-                created by <a href="https://www.facebook.com/nely.nurnaini">
+               created by <a href="https://www.facebook.com/nely.nurnaini">
                <span><i class="fa fa-facebook-square" style="color: #1da1f2"></i>Nurnaini</span></a>
                created by <a href="https://twitter.com/neny_ls">
                <span><i class="fa fa-twitter-square" style="color: #1da1f2"></i>nurnaini</span></a>
                gitHub by <a href="https://github.com/Nurnainii/FRAMEWORK_E_1515015204_779497">
               <span><i class="fa fa-github" style="color: #1da1f2"></i>Nurnainii</span></a> <!--/   please dont delete this    -->
-           </marquee></footer>
+           </footer>
        </nav>
 
        <script type="text/javascript" src="{{ asset('component/jquery/dist/jquery.min.js') }}"></script>
@@ -145,3 +145,4 @@
 
 </body>
 </html>
+

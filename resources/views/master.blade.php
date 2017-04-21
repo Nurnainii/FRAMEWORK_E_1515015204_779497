@@ -64,7 +64,7 @@
                         <a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Dosen <span class="caret"></span>
                         </a>
                          <ul class="dropdown-menu" aria-labelledby="dLabel">
-                                <li><a href="{{url('dosen')}}">Data Dosen</a></li>
+                                <li><a href="{{url('dosenn')}}">Data Dosen</a></li>
                                 <li class="divider"></li>
                                 <li><a href="{{url('dosen_matakuliah')}}">Jadwal Dosen Mengajar</a></li>
                             </ul>
@@ -96,18 +96,29 @@
                     {{Session::get('informasi')}}
                 </div>
             @endif
+
+            @if (count($errors) > 0)
+            <div class="alert alert-danger">
+                <ul>
+                      @foreach ($errors->all() as $error)
+                      <li>{{ $error }}</li>
+                      @endforeach
+                </ul>
+            </div>
+            @endif
+
             @yield('container')
        </div>
        <nav class="navbar navbar-default navbar-fixed-bottom">
            <footer class="container">
-               <!   please dont delete this ><marquee>
+               <!   please dont delete this >
                created by <a href="https://www.facebook.com/nely.nurnaini">
                <span><i class="fa fa-facebook-square" style="color: #1da1f2"></i>Nurnaini</span></a>
                created by <a href="https://twitter.com/neny_ls">
                <span><i class="fa fa-twitter-square" style="color: #1da1f2"></i>nurnaini</span></a>
                gitHub by <a href="https://github.com/Nurnainii/FRAMEWORK_E_1515015204_779497">
               <span><i class="fa fa-github" style="color: #1da1f2"></i>Nurnainii</span></a> <!--/   please dont delete this    -->
-           </marquee></footer>
+           </footer>
        </nav>
 
        <script type="text/javascript" src="{{ asset('component/jquery/dist/jquery.min.js') }}"></script>
