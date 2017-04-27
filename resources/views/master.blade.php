@@ -15,6 +15,7 @@
                 padding-top: 70px;
                 padding-bottom: 70px;
                 background-color: lightblue;
+    
            }
 
            .starter-template{
@@ -80,6 +81,10 @@
                                 <li><i class="fa fa-cogs"><a href="{{url('matakuliah')}}">matakuliah</i></a></li>
                             </ul>
                     </li>
+                    <li>
+                    <a href="{{ url('logout')}}">Logout</a>
+                  </li>
+
                 </ul>
 
             </div><!--/.nav-collapse -->
